@@ -115,6 +115,64 @@ CREATE TABLE table_name(
     column_name2 data_type [NULL|NOT NULL],
 );
 ~~~
+
+En la sintaxis __CREATE TABLE__ aterior, _table_name_ es el nombre de la tabla que se desea dar, _column_name1_ es el nombre de la primera columna, _column_name2_ sería el nombre de la segunda columna, y asi sucesivamente. Es _data_type_ el tipo de datos que se almacenará en un columna, por ejemplo, cadena, número entero, fecha y hora, etc. Los tipos de datos varían de una base de datos a otra, por ejemplo, el tipo de datos de cadena en SQL sever es o, mientras que __varchar__ en __nvarchar__ Oracle __varchar2__. Por lo tanto, los tipo de datos dependen de la base de datos que esté utlizando.
+
+Utlice __NULL__ o __NOT NULL__ restricción para especificar si una columna permite valores nulos o no. De forma predeterminada, todas las columnas permiten __NULL__ valores a menos que se especifiquen __NOT NULL__ las columnas son obligatorias al insertar o actualizar datos.
+
+***
+#### Crear tabla en SQL server, MySQL, PostegreSQL, SQLite
+
+El siguiente comando se utlizara para crear la tabla __Employee__ tabla en la base de datos SQL server, MySQL, PostegreSQL, SQLite
+
+~~~
+CREATE TABLE Employee(
+  EmpId integer,
+  FirsName varchar(20),
+  LastName varchar(20),
+  Email varchar(25),
+  PhoneNO varchar(25),
+  Salary integer
+);
+~~~
+
+Arriba __Employee__ está el nombre de la tabla y, __EmpId__,__FirsName__,__LastName__,__Email__,__PhoneNO__ y __Salary__ son __HireDate__ de las columnas. Varchar es el tipo de cadena con el tamaño mencionado entre paréntesis, por ejemplo, __Varchar(20)__ especifica que la columna almacenará una cadena de hasta 20 caracteres  de longitud.
+
+La mayoría de la veces, todas las tablas de la base de datos tendrían al menos una columna como clave primaria. Acontinuación se define una tabla con una clave principal
+
+Crea __EmpId integer PRIMARY KEY__,la __EmpId__ columna y también la define como la clave principal al mismo tiempo.
+
+~~~
+CREATE TABLE Employee(
+  EmpId integer PRIMARY KEY,
+  FristName varchar(20),
+  LastName varchar(20),
+  Email varchar(25),
+  PhoneNO varchar(25),
+  Salary integer
+);
+~~~
+
+***
+#### Crear un tabla a partir de una tabla ya exitente
+El comando __CREATE TABLE AS__ se utiliza para crear una tabla a partir de una tabla existente con la estructura y los datos, como se muestra a continiación: las siguientes consultas funcionarán en Oracle, MySQL, SQLite y PostgreSQL.
+
+~~~
+CREATE TABLE Employee_BacKup AS SELECT * FROM Employee;
+~~~
+
+para crear un copia de la tabla __Employee__, con columna y datos selecionados, use __CREATE TABLE AS__, como se muestra a continuación:
+
+~~~
+CREATE TABLE TempEmployee AS (SELECT EmpId, FirstName, LastName FROM Employee);
+~~~
+
+para crear la copia de la tabla Employee, con solo estructura y sin datos use la sentencia __CREATE TABLE AS__ como se muestra a continuación:
+
+~~~
+CREATE TABLE Consultant AS SELECT * FROM Employee WHERE 1=2;
+~~~
+
 </details>
 
 
