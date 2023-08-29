@@ -204,6 +204,17 @@ Según el comando __ALTER TABLE__, creamos la tabla __Employee__, como se muestr
 
 El siguiente comando __ALTER__ agregará columnas de dirección, ciudad, código PIN a la tabla __Employee__:
 
+~~~
+ALTER TABLE
+ADD(  Address varchar(100),
+      City varchar(25),
+      PinCode integer
+);
+~~~
+
+|ID emp| Nombre de pila | Apellido | Correo electronico | Telefono no| salario|dirección|ciudad|Código PIN|
+|------|----------------|----------|--------------------|------------|--------|---------|------|----------|
+|      |                |          |                    |            |        |         |      |          |
 
   
 </details>
