@@ -172,9 +172,41 @@ para crear la copia de la tabla Employee, con solo estructura y sin datos use la
 ~~~
 CREATE TABLE Consultant AS SELECT * FROM Employee WHERE 1=2;
 ~~~
-
 </details>
 
+***
+<details>
+  <summary>
+
+   ## __Declaraciones ALTER TABLE__ 
+  </summary>
+
+  ### SQL/ALTER TABLE
+  El comando __ALTER TABLE__ es un comando __DDL__ para modificar la estructura de tabla existentes en la base de datos agragando, modificando, cambiando el nombre o eliminando columnas y restricciones. Puede agregar columnas, cambiarles el nombre, eliminarlas o cambiar de tipo de datos en las columnas usando el comando __ALTER__
+  
+  ***
+  ### Agragar columnas en la tabla
+  Utilice el comando __ALTER TABLE ADD__ para agregar nuevas columnas en la tabla de base de datos.
+
+  _Sintaxis_
+~~~
+ALTER TABLE table_name
+ADD Column_name1 data_type,
+    Column_name2 data_type,
+);
+~~~
+
+Según el comando __ALTER TABLE__, creamos la tabla __Employee__, como se muestra a continuación. Ahora, agregamos nuevbas columnas usando el comando __ALTER__
+
+|ID emp| Nombre de pila | Apellido | Correo electronico | Telefono no| salario|
+|------|----------------|----------|--------------------|------------|--------|
+|      |                |          |                    |            |        |
+
+El siguiente comando __ALTER__ agregará columnas de dirección, ciudad, código PIN a la tabla __Employee__:
+
+
+  
+</details>
 
 
 
