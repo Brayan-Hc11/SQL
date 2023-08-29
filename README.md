@@ -96,6 +96,7 @@ de la base de datos mediante ejecución de instrucciones DML. Los comandos SCL v
 |Alter session| Modificar los parametros  de la base de datos para la sesión actual.|
 |Set role | Para habilitar o deshabilitar roles para la sesión actual. |
 </details>
+
 ***
 
 <details>
