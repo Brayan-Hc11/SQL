@@ -219,5 +219,49 @@ ADD(  Address varchar(100),
   
 </details>
 
+***
+<details>
+  <summary>
+
+   ## __RENAME COLUMNS/Cambiar el nombre de una colunma__
+  </summary>
+
+El comando ALTER es un comando DDL para modificar la estructura de tablas existentes en la base de datos agregando, modificando, cambiando el nombre o eliminando columnas y restricciones. Utilice el comando ALTER TABLE RENAME para cambiar el nombre de las columnas.
+
+_Sintaxis_
+~~~
+ALTER TABLE table_name 
+RENAME COLUMN old_column_name TO new_column_name;
+~~~
+
+Para fines de demostración, considere la siguiente tabla Employee
+
+|ID emp| Nombre de pila | Apellido | Correo electronico | Telefono no| salario|dirección|ciudad|Código PIN|
+|------|----------------|----------|--------------------|------------|--------|---------|------|----------|
+|      |                |          |                    |            |        |         |      |          |
+
+El siguiente script SQL cambiará el nombre PinCodede por ZipCodela  en la tabla Employee  en la base de datos Oracle, MySQL, PostgreSQL, SQLite.
+
+
+|ID emp| Nombre de pila | Apellido | Correo electronico | Telefono no| salario|dirección|ciudad|Código Postal|
+|------|----------------|----------|--------------------|------------|--------|---------|------|-------------|
+|      |                |          |                    |            |        |         |      |             |
+
+</details>
+
+***
+<details>
+  <summary>
+
+  ## __SQL/modificar el tipo y tamaño de datos de la columna__  
+  </summary>
+
+  El comando __ALTER__ es un comando _DDL_ para la modificación de la estructura de tablas de datos ya exitentes en la base de datos agregando, modificando, cambiando o eliminando columnas y restrcciones.
+
+  Diferentes bases de datos admiten diferentes sintaxis __ALTER TABLE__ para modificar el tipo y tamaño de datos de la columna.
+
+  La siguiente instrucción __ALTER TABLE__ modifica el tamaño de la colunma Address de la tabla Employee en la base de datos 
+</details>
+
 
 
